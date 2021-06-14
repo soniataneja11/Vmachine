@@ -6,7 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -24,12 +26,12 @@ public class VendingMachineTest {
 
     private static VendingMachine VMachine;
 
-    @Before
+    @BeforeClass
     public static void setUp() {
     	VMachine = VendingMachineFactory.createVendingMachine();
     }
 
-    @After
+    @AfterClass
     public static void tearDown() {
     	VMachine = null;
     }
